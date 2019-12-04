@@ -27,13 +27,13 @@ label = pyglet.text.Label('WELCOME TO THE BOLLYWOOD DUMBCHARADES',
                           x=window.width // 2, y=window.height // 1.2,
                           anchor_x='center', anchor_y='center')
 
-label3 = pyglet.text.Label("Press 'Enter' on keyboard to generate again.",
+label3 = pyglet.text.Label("Press 'Spacebar' on keyboard to exit.",
                            font_name='san serif',
                            font_size=14,
                            x=window.width // 2, y=window.height // 2.8,
                            anchor_x='center', anchor_y='center')
 
-label4 = pyglet.text.Label("Press 'G' on keyboard to generate. Press 'G' again to re-generate.",
+label4 = pyglet.text.Label("Press 'Enter' on keyboard to generate. Press 'Enter' again to re-generate.",
                            font_name='san serif',
                            font_size=14,
                            x=window.width // 2, y=window.height // 1.4,
