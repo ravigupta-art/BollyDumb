@@ -1,2 +1,2 @@
 # BollyDumb
-A Bollywood Movie Name Generator for playing Dumb Charades with Bollywood Movies.
+A Bollywood Movie Name Generator to assist playing Dumb Charades with Bollywood Movies.
