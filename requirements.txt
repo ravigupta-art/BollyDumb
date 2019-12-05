@@ -1,4 +1,3 @@
-Framework==3.6.9
 pip==19.0.3
 future==0.18.2
 pyglet==1.4.8
