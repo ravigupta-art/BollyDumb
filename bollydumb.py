@@ -4,8 +4,13 @@ from pyglet.window import key
 # import the random function
 import random
 
+# import the floor function
+from math import floor
+
 # open the txt file into a variable named movielist
 movielist = open('MovieListComplete.txt', 'r')
+timer = False
+time = 60
 
 # getting the total number of movies in the list
 number_of_movies = 0
@@ -33,11 +38,17 @@ label3 = pyglet.text.Label("Press 'Esc' on keyboard to exit.",
                            x=window.width // 2, y=window.height // 2.8,
                            anchor_x='center', anchor_y='center')
 
-label4 = pyglet.text.Label("Press 'Enter' on keyboard to generate. Press 'Enter' again to re-generate.",
+label4 = pyglet.text.Label("Press 'Enter' on keyboard to generate. Press 'Enter' again to re-generate.\nPress 'Tab' to start/pause the Timer. Press 'Shift + Tab' to reset the timer. ",
                            font_name='san serif',
                            font_size=14,
                            x=window.width // 2, y=window.height // 1.4,
                            anchor_x='center', anchor_y='center')
+
+t_label = pyglet.text.Label("1:00.0",
+                            font_name='san serif',
+                            font_size=14,
+                            x=window.width // 2, y=window.height // 1.4,
+                            anchor_x='center', anchor_y='center')
 window.set_caption('BollyDumb v0.1-alpha')
 
 @window.event
@@ -45,8 +56,26 @@ def on_draw():
     label.draw()
     label4.draw()
     label3.draw()
+    t_label.draw()
 
 
+def update(dt):
+    t_label_color = (225, 237, 59, 255)
+    if timer == True:
+        time -= dt
+    if time <= 0 and timer == True:
+        timer = False
+        time = 0
+        t_label_color = (200, 0, 0, 255)
+    t_label = pyglet.text.Label("{}:{:02.1d}".format(floor(time/60),time%60),
+                                color=t_label_color
+                                font_name='san serif',
+                                font_size=18,
+                                x=window.width // 2, y=window.height // 1.6,
+                                anchor_x='center', anchor_y='center')
+    t_label.draw()
+    
+pyglet.clock.schedule_interval(update, 0.1)
 
 
 @window.event
@@ -66,6 +95,13 @@ def on_key_press(symbol, modifiers):
             anchor_x='center', anchor_y='center')
         label2.draw()
         movielist2.close()
+    elif symbol == key.TAB:
+        if modifiers & MOD_SHIFT:
+            time = 60
+        else:
+            if time <= 0:
+                time = 60
+            timer = not timer
     elif symbol == key.ESCAPE:
         pyglet.app.exit()
 
