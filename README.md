@@ -1,5 +1,5 @@
 # BollyDumb
-A Bollywood Movie Name Generator to assist playing Dumb Charades with Bollywood Movies.
+A **Bollywood Movie Name Generator** to assist playing **Dumb Charades** with Bollywood Movies.
 
 
 Download for Windows 32-bit Operating system:
