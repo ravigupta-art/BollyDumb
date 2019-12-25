@@ -15,6 +15,7 @@ movielist.close()
 
 # open the file again to read from beginning of the file
 movielist2 = open('MovieListComplete.txt', 'r')
+movie_number = []
 
 window = pyglet.window.Window(1000, 720)
 image = pyglet.image.SolidColorImagePattern((105, 105, 105, 255)).create_image(1000, 720)
@@ -40,6 +41,7 @@ label4 = pyglet.text.Label("Press 'Enter' on keyboard to generate. Press 'Enter'
                            anchor_x='center', anchor_y='center')
 window.set_caption('BollyDumb v0.1-alpha')
 
+
 @window.event
 def on_draw():
     label.draw()
@@ -47,16 +49,25 @@ def on_draw():
     label3.draw()
 
 
-
-
 @window.event
 def on_key_press(symbol, modifiers):
     if symbol == key.ENTER:
         window.clear()
         image.blit(0, 0)
-        movielist2 = open('MovieListComplete.txt', 'r')
         random_movie = random.randint(0, number_of_movies - 1)
-        print(random_movie)
+        repeat = True
+
+        # checking whether any movie number is repeated
+        while repeat:
+            if random_movie in movie_number:
+                print("repeat", random_movie)
+                random_movie = random.randint(0, number_of_movies - 1)
+            else:
+                repeat = False
+            print(random_movie)
+        movie_number.append(random_movie)
+        print(movie_number)
+
         label2 = pyglet.text.Label(
             "Here is a random movie for the Dumb Charades:    " + movielist2.readlines()[random_movie],
             color=(10, 50, 20, 255),
