@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>BollyDumb</title>
+{% endblock %}
+
+
+{% block body %}
+<main role="main" class="flex-shrink-0">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-11 col-md-8 col-lg-6 welcome-bg">
+				<div>
+					<h1 class="welcome-heading-text text-center">Welcome to the online <br>Bollywood Dumbcharades</h1>
+				</div>
+				<div>
+					<h2 class="welcome-info-text text-center">This is a very simple application that allows to generate a random movie name with a timer.</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-8 col-lg-6">
+				<p class="movie-name-heading align-middle">Movie Name</p>
+				<div class="form-control movie-name-box">
+					<p class="movie-name-text text-center">{{ generated_movie_name }}</p>
+				</div>
+				<div class="control-buttons-row">
+
+  					<form action="/" method="POST">
+  						<div class="input-group">
+	  						<div class="input-group-prepend">
+	  						  <label class="input-group-text" for="timer_value">Timer<i class="bi bi-clock"></i></label>
+	  						</div>
+	  						<select class="custom-select" id="timer_value" name="timer_value">
+	  						  <option value="60">1 Minute</option>
+	  						  <option value="120" selected>2 Minutes</option>
+	  						  <option value="180">3 Minutes</option>
+	  						</select>
+	  						<button type="submit" role="button" class="btn btn-warning generate-btn btn-lg">Generate</button>
+						</div>
+  					</form>
+
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-11 col-md-8 col-lg-6 instruction-box">
+				<p class="text-center text-light instruction">Select a timer and then press ‘Generate’ button to generate a random movie name.</p>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-6 col-md-6 col-lg-6 timer-box">
+							<p class="text-center font-weight-bold lead">Time Remaing:</p>
+                   			<p class="text-center timer-text"><span id="countdown"></span></p> 
+			</div>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
