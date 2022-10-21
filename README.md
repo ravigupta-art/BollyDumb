@@ -17,7 +17,7 @@ The following steps are written keeping in mind a linux os, exact commands and p
 - Open a browser and goto `http://localhost:5000/` to start playing.
 
 ## Deploying to Heroku/PythonAnywhere/webserver
-- Please look in to flask documentation [here](https://flask.palletsprojects.com/en/1.1.x/deploying/#deployment) to see the platform specific steps.
+- Please look in to flask documentation [here](https://flask.palletsprojects.com/en/2.2.x/deploying/) to see the platform specific steps.
 
 Note: The application is still a work in progress and we will be adding new features in future releases.
 
