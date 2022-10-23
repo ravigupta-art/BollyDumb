@@ -23,7 +23,7 @@ Note: The application is still a work in progress and we will be adding new feat
 
 ## Third party
 
-- Flask 1.1.2 ([BSD-3-Clause License](https://github.com/pallets/flask/blob/master/LICENSE.rst))
+- Flask 2.2.2 ([BSD-3-Clause License](https://github.com/pallets/flask/blob/master/LICENSE.rst))
 - Bootstrap 4.5.3 ([MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE))
 - Bootstrap Icons 1.2.2 ([ MIT License](https://github.com/twbs/icons/blob/main/LICENSE.md))
 - JQuery 3.5.1 ([MIT License](https://jquery.org/license/))
