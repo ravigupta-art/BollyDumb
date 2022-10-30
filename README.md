@@ -3,7 +3,7 @@
 A **Bollywood Movie Name Generator**, for assistance in playing the **Dumb Charades** with Bollywood Movies.
 #### Demo: https://bollydumb.pythonanywhere.com/
 ## Local Installation 
-Pre-requisites for local installtion using python virtual environment (venv): Python3, Git, Terminal application (gitbash, bash, powershell, etc.).
+Pre-requisites for local installation using python virtual environment (venv): Python3, Git, Terminal application (gitbash, bash, powershell, etc.).
 
 The following steps are written keeping in mind a linux os, exact commands and process might change on Windows and MacOS. Please modify the commands and steps as per your OS.
 
@@ -20,6 +20,9 @@ The following steps are written keeping in mind a linux os, exact commands and p
 - Please look in to flask documentation [here](https://flask.palletsprojects.com/en/2.2.x/deploying/) to see the platform specific steps.
 
 Note: The application is still a work in progress and we will be adding new features in future releases.
+
+## Reference
+- [Flask documentation](https://flask.palletsprojects.com/en/2.2.x/)
 
 ## Third party
 
