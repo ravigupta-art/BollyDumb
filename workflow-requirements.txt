@@ -1,4 +1,4 @@
-click==8.*.*
+click==8.0.*
 colorama==0.4.*
 Flask==2.*.*
 Flask-SQLAlchemy==3.*.*
