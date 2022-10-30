@@ -1,0 +1,11 @@
+click==8.*.*
+colorama==0.4.*
+Flask==2.*.*
+Flask-SQLAlchemy==3.*.*
+greenlet==1.*.*
+gunicorn==20.*.*
+itsdangerous==2.*.*
+Jinja2==3.*.*
+MarkupSafe==2.*.*
+SQLAlchemy==1.*.*
+Werkzeug==2.*.*
