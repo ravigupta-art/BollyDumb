@@ -7,7 +7,7 @@ Pre-requisites for local installation using python virtual environment (venv): P
 
 The following steps are written keeping in mind a linux os, exact commands and process might change on Windows and MacOS. Please modify the commands and steps as per your OS.
 
-- Open a Termainal and Clone the repository to desired location using `git clone https://github.com/ravigupta-art/BollyDumb.git`.
+- Open a Termainal and Clone the repository to desired location using `git clone git@github.com:ravigupta-art/BollyDumb.git`. (You need to setup SSH keys first. Look [Github's documentation on connecting with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) for more info. )
 - CD into cloned repository using `cd BollyDumb`.
 - Create a virtual environment named 'python3env' using `python3 -m venv python3env`.
 - Activate virtual environment using `source python3env/bin/activate`.
